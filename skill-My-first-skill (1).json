@@ -1,0 +1,956 @@
+{
+  "intents": [
+    {
+      "intent": "definition",
+      "examples": [
+        {
+          "text": "how do you define an exacta?"
+        },
+        {
+          "text": "what is a trifecta?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "hours",
+      "examples": [
+        {
+          "text": "what time does the track open?"
+        },
+        {
+          "text": "what are your hours?"
+        },
+        {
+          "text": "when will you be open?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "buy",
+      "examples": [
+        {
+          "text": "how to buy a ticket online?"
+        },
+        {
+          "text": "where to buy the tickets?"
+        },
+        {
+          "text": "how to buy the tickets"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "refund",
+      "examples": [
+        {
+          "text": "is the entry fee refundable"
+        },
+        {
+          "text": "what is the refund policy"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "dresscode",
+      "examples": [
+        {
+          "text": "what is the dresscode?"
+        },
+        {
+          "text": "what is the dress code?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "hi"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "heylo"
+        },
+        {
+          "text": "heyoo"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hey"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "fees",
+      "examples": [
+        {
+          "text": "what is the fee?"
+        },
+        {
+          "text": "what is the fare?"
+        },
+        {
+          "text": "how much do you charge?"
+        },
+        {
+          "text": "what is the entry fee?"
+        },
+        {
+          "text": "what is the basic price?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "track",
+      "examples": [
+        {
+          "text": "how long is the track?"
+        },
+        {
+          "text": "what is the length of the track?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "duration",
+      "examples": [
+        {
+          "text": "how long does a race last?"
+        },
+        {
+          "text": "what is the duration of a race?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "thanks",
+      "examples": [
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "thanks"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "children",
+      "examples": [
+        {
+          "text": "how much do you charge for children?"
+        },
+        {
+          "text": "are children allowed?"
+        },
+        {
+          "text": "do you allow children?"
+        },
+        {
+          "text": "what is the charge for children?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "location",
+      "examples": [
+        {
+          "text": "how to get to the track"
+        },
+        {
+          "text": "where are you located?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "count",
+      "examples": [
+        {
+          "text": "how many participants are there?"
+        },
+        {
+          "text": "what are the number of participants?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "tips",
+      "examples": [
+        {
+          "text": "best tips of today's race"
+        },
+        {
+          "text": "where to find the best tips?"
+        },
+        {
+          "text": "tell some good tips"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "dresscode",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "dresscode",
+          "synonyms": [
+            "dress code",
+            "dress-code"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "children",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "charge",
+          "synonyms": [
+            "fare",
+            "price"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "allow",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "fees",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "fare",
+          "synonyms": [
+            "fares",
+            "price",
+            "fees",
+            "charging",
+            "charge",
+            "rate"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "bets",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "win",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "exacta",
+          "synonyms": [
+            "perfecta"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "pick 6",
+          "synonyms": [
+            "pick6"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "show",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "place",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "superfecta",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "trifecta",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "buy",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "buy",
+          "synonyms": [
+            "purchase",
+            "buying",
+            "get"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "hours",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "time",
+          "synonyms": [
+            "when",
+            "timings",
+            "hours"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "racetrack",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "track",
+          "synonyms": [
+            "horse racing",
+            "harness racing",
+            "raceway"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "participants",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "participants",
+          "synonyms": [
+            "participant",
+            "members",
+            "entrants",
+            "racers",
+            "contestants"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "duration",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "duration",
+          "synonyms": [
+            "long",
+            "durations",
+            "length",
+            "time"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "teller",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "teller",
+          "synonyms": [
+            "desk",
+            "betting table",
+            "counter",
+            "clerk",
+            "cashier"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "refund",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "refund",
+          "synonyms": [
+            "refunds",
+            "return",
+            "cancellation"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "online",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "online",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "tips",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "tips",
+          "synonyms": [
+            "tip"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "length",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "length",
+          "synonyms": [
+            "size",
+            "long",
+            "lengths"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "hours",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "the track is open everyday"
+              },
+              {
+                "text": "open can come here  anytime between 9am and 5pm\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "node_10_1588771717486",
+      "conditions": "@hours",
+      "dialog_node": "node_9_1589279547022",
+      "previous_sibling": "node_8_1588771976198"
+    },
+    {
+      "type": "standard",
+      "title": "teller",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "the window opens at noon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1588771717486",
+      "conditions": "@teller",
+      "dialog_node": "node_8_1588771976198",
+      "previous_sibling": "node_10_1588771750286"
+    },
+    {
+      "type": "standard",
+      "title": "racetrack",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "the racetrack is open everyday"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1588771717486",
+      "conditions": "@racetrack",
+      "dialog_node": "node_10_1588771750286"
+    },
+    {
+      "type": "standard",
+      "title": "exacta",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "a bet in which the first two places in a race must be predicted in the correct order"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1588772270348",
+      "conditions": "@bets:exacta",
+      "dialog_node": "node_2_1588772660431",
+      "previous_sibling": "node_1_1588772452997"
+    },
+    {
+      "type": "standard",
+      "title": "trifecta",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "a bet in which the person betting forecasts the first three finishers in a race in the correct order"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1588772270348",
+      "conditions": "@bets:trifecta",
+      "dialog_node": "node_1_1588772452997"
+    },
+    {
+      "type": "standard",
+      "title": "refund",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "the fee is non refundable and non transferable"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "@refund",
+      "dialog_node": "node_10_1589283481621",
+      "previous_sibling": "node_3_1589282027862"
+    },
+    {
+      "type": "standard",
+      "title": "length",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "the track is 1100 meters long "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#track && @length",
+      "dialog_node": "node_5_1589282448798",
+      "previous_sibling": "node_10_1589283481621"
+    },
+    {
+      "type": "standard",
+      "title": "dresscode",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "vintage style dressing would be perfect!!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@dresscode",
+      "dialog_node": "node_7_1589283009366",
+      "previous_sibling": "node_5_1589282448798"
+    },
+    {
+      "type": "standard",
+      "title": "duration",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "a typical race would last for about 3 minutes"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#duration && @duration",
+      "dialog_node": "node_6_1589283188916",
+      "previous_sibling": "node_7_1589283009366"
+    },
+    {
+      "type": "standard",
+      "title": "children",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "yes children are allowed"
+              },
+              {
+                "text": "yes  we do"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "@children:allow",
+      "dialog_node": "node_9_1589280438351",
+      "previous_sibling": "node_6_1589279932988"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_7_1588771351857",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "tips",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "kinldy visit https://myracing.com/free-horse-racing-tips/"
+              },
+              {
+                "text": "please visit https://myracing.com/free-horse-racing-tips/"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "@tips",
+      "dialog_node": "node_3_1589282027862",
+      "previous_sibling": "node_4_1589281488123"
+    },
+    {
+      "type": "standard",
+      "title": "definitions",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_1_1588772452997"
+      },
+      "conditions": "#definition",
+      "dialog_node": "node_10_1588772270348",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "greeting",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#greeting",
+      "dialog_node": "node_7_1588771351857",
+      "previous_sibling": "node_8_1588771541528"
+    },
+    {
+      "type": "standard",
+      "title": "but(online)",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "kindly visit www.bookmyshow.com"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "@online",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1589281649062",
+      "previous_sibling": "node_9_1589280438351"
+    },
+    {
+      "type": "standard",
+      "title": "buy(offline)",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "visit the track counter"
+              },
+              {
+                "text": "visit the counter"
+              },
+              {
+                "text": "go to the nearest track counter"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@buy",
+      "dialog_node": "node_4_1589281488123",
+      "previous_sibling": "node_9_1589281649062"
+    },
+    {
+      "type": "standard",
+      "title": "fees",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "the basic fare is 500/-"
+              },
+              {
+                "text": "the entry fee is 500/-"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "@fees",
+      "dialog_node": "node_6_1589279932988",
+      "previous_sibling": "node_3_1589280499880"
+    },
+    {
+      "type": "standard",
+      "title": "participants",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "there are five in all"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@participants",
+      "dialog_node": "node_9_1589282806972",
+      "previous_sibling": "node_6_1589283188916"
+    },
+    {
+      "type": "standard",
+      "title": "children:fare",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "children below 3 years  have no fare.All the others have the regular fees."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@children && #children",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1589280499880",
+      "previous_sibling": "node_10_1588771717486"
+    },
+    {
+      "type": "standard",
+      "title": "hours",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_10_1588771750286"
+      },
+      "conditions": "#hours",
+      "dialog_node": "node_10_1588771717486",
+      "previous_sibling": "node_10_1588772270348"
+    },
+    {
+      "type": "standard",
+      "title": "thank you",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "you're welcome!!"
+              },
+              {
+                "text": "welcome!!"
+              },
+              {
+                "text": "anytime!!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#thanks",
+      "dialog_node": "node_8_1588771541528",
+      "previous_sibling": "node_9_1589282806972"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "shgjha"
+    }
+  ],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
